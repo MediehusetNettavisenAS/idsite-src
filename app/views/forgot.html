@@ -2,14 +2,14 @@
   <div class="box row">
     <div class="col-sm-12">
       <div class="header">
-        <span ng-show="!sent && !retry">Password Reset</span>
-        <span ng-show="retry">Reset link has expired</span>
-        <span ng-show="sent">Please check your mail.</span>
+        <span ng-show="!sent && !retry">Tilbakestill passord</span>
+        <span ng-show="retry">Lenken du fulgte har gått ut på dato</span>
+        <span ng-show="sent">Vennligst sjekk din e-post.</span>
 
       </div>
       <div class="wd-sent" ng-show="sent">
         <p>
-          <span>We've sent a password reset link to </span>
+          <span>Vi har nå sendt en tilbakestillingslenke for passord til: </span>
           <strong>{{fields.email.value}}</strong>.
         </p>
         <p>&nbsp;</p>
@@ -18,23 +18,23 @@
 
 
         <div class="form-group group-email" ng-class="{'has-error':notFound}" form-group>
-          <label class="col-sm-6" ng-hide="retry">Send password reset instructions to:</label>
-          <label class="col-sm-6" ng-show="retry">Send new password reset email to:</label>
+          <label class="col-sm-6" ng-hide="retry">Send instruksjoner for å tilbakestille passord til:</label>
+          <label class="col-sm-6" ng-show="retry">Send e-post med instruksjoner til:</label>
           <div class="col-sm-6">
             <input type="text" class="form-control" name="email" form-control email-validation validate-on-blur/>
-            <small class="help-block wd-invalid-email" ng-show="validationError">Invalid email address</small>
-            <small class="help-block wd-not-found" ng-show="notFound"><span>Account does not exist.</span></small>
+            <small class="help-block wd-invalid-email" ng-show="validationError">Dette er ikke en e-postadresse</small>
+            <small class="help-block wd-not-found" ng-show="notFound"><span>Denne kontoen eksisterer ikke i vårt system.</span></small>
           </div>
         </div>
         <div class="alert alert-danger" ng-show="unknownError">
-          <strong>Sorry, an error occured.  Please reload the page and try again.</strong>
+          <strong>Beklager dert har oppstått en feil, vennligst last siden på nytt og prøv igjen.</strong>
           <br/>
           <br/>
           <p>{{unknownError}}</p>
         </div>
-        <button class="btn btn-forgot btn-sp-green" type="submit">Reset Password</button>
+        <button class="btn btn-forgot btn-sp-green" type="submit">Tilbakestill passord</button>
       </form>
     </div>
   </div>
-  <a ng-show="!sent" class="to-login" href="#" wd-back-to-login>Back to Log In</a>
+  <a ng-show="!sent" class="to-login" href="#" wd-back-to-login>Tilbake til innlogging</a>
 </div>

@@ -103,13 +103,59 @@ p{
   width: auto;
 }
 
+.button-na {
+  
+  &.top {
+    width: 40px;
+    background-color: #20234c;
+    border-radius: 50%;
+    height: 40px;
+    margin-top: -10px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+  }
+
+  &.other {
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 40px;
+        background-color: #20234c;
+        height: 40px;
+        border-radius: 50%;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        margin-left: 0;
+        margin-top: 0;
+        background-position: 10px;
+    }
+  }
+
+  &:before {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAMCAIAAAACrGGSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6REU5OTRCRkQ3QTU3MTFFNUI5RTlBRDQyQjlFMzZCQjEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6REU5OTRCRkU3QTU3MTFFNUI5RTlBRDQyQjlFMzZCQjEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpERTk5NEJGQjdBNTcxMUU1QjlFOUFENDJCOUUzNkJCMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpERTk5NEJGQzdBNTcxMUU1QjlFOUFENDJCOUUzNkJCMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pl3gF6gAAALuSURBVHjaDJFbTBRXGMfPbWZnZmF2NZFlI5etrKAoWeVFangghqgN0lptxQvQGtxo0jTRB5/apGmrtg2mSX3WEG+JD6UPNvaFppqofbDUxQVFQQKoIbDuuMvO7MzOzJlzPI/f9f/7vj9saumub2hYXHwTMERwiFFOJG5XjB0d22tqaooF++H9xxLRRNI0zVQqlc1mFUXBGDPGgiDA9Y2bfxn+WSJy9skzzwsIRhBTQviFC9+n059tamkfG/vbMu2K59TG48MXhzMTGeOdgTB2PU9RVVSx7XVr8bkfT/50/pSCcp4ETZtQt0ojqgR8TX5bLuZ0ORaU8ae9XamUenxol7Wa576iSDr1y4hzbts2RuDgwU9u3ryqqxABG0K3bBchgI7rK2p4KZeLxyPH+g/JhHzc07NtexsLPADEBQAhSGRZ5oCHQujDnW13bl/v7NhcKr6q0qSSWQpXRd+VrFB1+MixnkQiAgDQq7X+gcOmZXBGMZKQ7wcCwROnMy7KH9TpI1cunf56yK2YenXUcamsqaquDh7fTwMAARJdfZ/vbd26oWQaCGBEKQUcSVJoZTl/7eofnseqwujbb86mtrUBQYfQajH3xeCBeCyKOBgd/Yu6QFFB+sRRggJCCNjY3D2RnfcZf/BvtrG+/bsffiusMi6YGKeUTU2/bO/YvbAsomBycq45ufOfu5OCOF9093w0WFvbKQSA6OMMrInWEBy++OvlofSZ6dllgQU59B0n/WVfXQywgN+4Njo/l//91p+cg2hE7h/oY4yCpmTXzKwhNjx9amxK7mlo7l2f6GpLdT+8PxF43Lc9Ie377uzMfKJuR2vywPpY56Px52W3IkZ69n2FGxNbOIBGnj7OTP03niGcyFh5m1u9e+/R0oppFGlmYm5yamFk5Pbi6yXHsxRNnXnxhtHq/8fnKhUXNiV3aZpiWU5Aoa5HfY+Fw6rnu5ZVglCQ0iDwhcEYKcKjWCxmWVahUIhEIuLxjuO8F2AAL9GI58MNpYcAAAAASUVORK5CYII=);
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -10.5px;
+    top: 50%;
+    margin-top: -6px;
+    width: 21px;
+    height: 12px;
+    background-size: cover;
+  }
+
+}
+
 .btn-facebook{
   &:before{
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAABcElEQVRYw2NgGAWjYBSMghECTEKXMF6788bwy7dfW//+/ff+PxAA6U9A/BIoxzUQDmI6dv6p5Z8//778xwKA8koD4Sie1+++HfiPAwDl9QbCUbK///z9AXPEq3ffvjZPP76voH3/uppJR/qB8mp0T0txFdtNkUNmy4G7x4HisUDsCsRGQCxAd0el1u2yR3bU/pOPNgDFVUEJHIjZQWmO3o5iTq7Z6YjsqMNnn6wCiosNSOL+TwT48fPPOaBaTno5SoUYR91/8vEIUK0UvRxlQIyjjp57uhOoVp5ejtKYu/bykr4FZw5MWXb+BLJDjl949rh3wZlDQPHNFX2Hs+mWvoAWiQCxDRAH+matL0crEvYhFQnqdKtmgBaxgBI7EAvHlG3zQXbUwdOP10KLBF5okcA44EXCkXNPVw5IkTDqqFFHjTRHMYEKUiDOBWJQ26kGiN2AWHBA2+bQ8ghULhkAsSYQiwMx22jPZRSMglEwXAEAX9cKOHJLA3EAAAAASUVORK5CYII=);
     content: "";
     position: absolute;
     left: 0;
-    top: 13px;
+    top: 10px;
     width: 40px;
     background-color: #3557a8;
     height: 40px;
@@ -148,13 +194,17 @@ p{
   .header{
     & , & a{
       font-weight: 300;
-      font-size: 17px;
+      font-size: 20px;
     }
     .can-register {
       float: right;
     }
 
-    padding: 34px 0;
+    span {
+      vertical-align: top;
+    }
+
+    padding: 14px 0;
   }
   input[type="text"],
   input[type="password"]{
@@ -180,7 +230,7 @@ p{
       margin-bottom: 25px;
     }
     label{
-      height: @inputHeight;
+      height: 30px;
       line-height: @inputHeight;
     }
   }

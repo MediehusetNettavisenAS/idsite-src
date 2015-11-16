@@ -2,12 +2,7 @@
   <div class="box row">
     <div class="email-password-area  col-xs-12" ng-class="[hasSocial ? 'small col-sm-8' : 'large col-sm-12']">
       <div class="header">
-        <span>Logg inn</span>
-        <span ng-show="canRegister" class="can-register" wd-can-register>
-          <span> Ingen konto? </span>
-          <a href="#register">Opprett ny her</a>
-        </span>
-
+        <span>Logg inn her</span>
       </div>
       <div class="alert alert-danger bad-login" ng-show="errors.badLogin">
         Feil brukernavn eller passord.
@@ -49,11 +44,14 @@
         </div>
       </form>
     </div>
-
+      <div class="header">
+        <span>Opprett ny bruker</span>
+      </div>
     <div class="social-area  col-xs-12 col-sm-4" ng-show="hasSocial">
       <div class="header">&nbsp;</div>
+      <a href="#register" class="btn btn-social button-na other">Registrer din personlige Nettavisen-ID</a>
       <button ng-repeat="p in providers" class="btn btn-social btn-{{p.providerId}}" ng-click="providerLogin(p.providerId)">
-        Logg inn med {{p.providerId}}</button>
+        Logg in med din {{p.providerId}}-profil</button>
     </div>
 
   </div>
