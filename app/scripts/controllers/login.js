@@ -40,7 +40,7 @@ angular.module('stormpathIdpApp')
         }
         js = d.createElement(s);
         js.id = id;
-        js.src = '//connect.facebook.net/es_LA/sdk.js';
+        js.src = '//connect.facebook.net/nb_NO/sdk.js';
         fjs.parentNode.insertBefore(js, fjs);
       }($window.document, 'script', 'facebook-jssdk'));
     }
